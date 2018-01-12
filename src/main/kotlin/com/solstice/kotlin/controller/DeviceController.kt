@@ -3,13 +3,14 @@ package com.solstice.kotlin.controller
 import com.solstice.kotlin.model.Device
 import com.solstice.kotlin.model.Owner
 import com.solstice.kotlin.services.DeviceService
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/device")
-class DeviceController(val _deviceService: DeviceService) {
+class DeviceController @Autowired constructor(val _deviceService: DeviceService) {
 
     @GetMapping("")
     fun getDefaultDevice(): Device {

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.ComponentScan
 
 @SpringBootApplication
-@ComponentScan("com.solstice.kotlin.controller", "com.solstice.kotlin.repositories")
+@ComponentScan("com.solstice.kotlin.controller", "com.solstice.kotlin.repositories", "com.solstice.kotlin.services")
 class KotlinExampleApplication
 
 fun main(args: Array<String>) {

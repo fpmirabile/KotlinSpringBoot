@@ -3,10 +3,11 @@ package com.solstice.kotlin.services
 import com.solstice.kotlin.model.Device
 import com.solstice.kotlin.repositories.DeviceRepository
 import com.solstice.kotlin.services.base.IBaseService
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class DeviceService(val _deviceRepository: DeviceRepository) : IDeviceService {
+class DeviceService @Autowired constructor(val _deviceRepository: DeviceRepository) : IDeviceService {
     override fun update(var1: Device): Device {
         return _deviceRepository.saveAndFlush(var1)
     }

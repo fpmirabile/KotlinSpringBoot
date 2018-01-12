@@ -2,8 +2,11 @@ package com.solstice.kotlin.services
 
 import com.solstice.kotlin.model.Owner
 import com.solstice.kotlin.repositories.OwnerRepository
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 
-class OwnerService(val _ownerRepository: OwnerRepository) : IOwnerService {
+@Service
+class OwnerService @Autowired constructor(val _ownerRepository: OwnerRepository) : IOwnerService {
     override fun findAll(): List<Owner> {
         return _ownerRepository.findAll()
     }

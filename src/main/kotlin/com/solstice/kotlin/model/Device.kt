@@ -4,7 +4,6 @@ import java.io.Serializable
 import javax.persistence.*
 
 @Entity
-@Table(name = "devices")
 @IdClass(value = Device::class)
 data class Device(
         @GeneratedValue(strategy = GenerationType.IDENTITY)
